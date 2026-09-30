@@ -1,4 +1,27 @@
 {
+  "permissionMode": "acceptEdits",
+  "allowedTools": [
+    "Read",
+    "Edit",
+    "Write",
+    "Glob",
+    "Grep",
+    "Bash(mvn test *)",
+    "Bash(mvn clean compile *)",
+    "Bash(mvn validate -N)",
+    "Bash(git status)",
+    "Bash(git diff *)",
+    "Bash(git add *)",
+    "Bash(git commit *)"
+  ],
+  "deniedPaths": [
+    ".env*",
+    "**/secrets/**",
+    ".github/workflows/**",
+    ".gitlab-ci.yml",
+    "CODEOWNERS"
+  ],
+  "maxTurns": 60,
   "hooks": {
     "SessionStart": [
       {
